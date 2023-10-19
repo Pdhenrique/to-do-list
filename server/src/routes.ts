@@ -15,3 +15,9 @@ router.get('/:id', (req, res) => {
   const todo = todoController.getById(Number(id))
   res.send(todo)
 })
+
+router.post('/', (req, res) => {
+  const { name, status } = req.body
+  todoController.create( name, status)
+  res.send('Tarefa criada.')
+})

@@ -21,8 +21,8 @@ export class TodoController {
     return data;
   }
 
-  create() {
-     
+  create(name: string, status: string) {
+    this.todo.push({ id: Math.floor(Math.random() * 1000), name, status })
   }
 
   update() {
