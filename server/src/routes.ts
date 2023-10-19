@@ -10,3 +10,8 @@ router.get('/', (req, res) => {
   res.send(todo)
 })
 
+router.get('/:id', (req, res) => {
+  const { id } = req.params
+  const todo = todoController.getById(Number(id))
+  res.send(todo)
+})
