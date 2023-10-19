@@ -33,5 +33,11 @@ export class TodoController {
     }
   }
 
-  delete() {}
+  delete(id: number) {
+    const targetDelete = this.todo.findIndex((item) => item.id === id);
+
+    if (targetDelete !== -1) {
+      this.todo.splice(targetDelete, 1);
+    }
+  }
 }
