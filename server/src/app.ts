@@ -1,11 +1,4 @@
-import express from 'express'
+import { app } from './api'
+import { router } from './routes'
 
-const app = express()
-
-app.get('/', (req, res) => {
-  res.send("Hello World")
-})
-
-app.listen(3000, () => {
-  console.log('server started in port 3000')
-})
+app.use(router)
