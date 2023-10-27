@@ -13,7 +13,8 @@ module.exports = {
       [
         'server',
         'core',
-        'web'
+        'web',
+        'release'
       ],
     ],
     'subject-empty': [2, 'never'],
